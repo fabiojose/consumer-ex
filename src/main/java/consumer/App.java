@@ -44,8 +44,9 @@ public class App {
                 // Processar os registros
                 records
                     .forEach(record -> {
-                        System.out.println(record.timestamp() + "  ---  "
-                            + record.key());
+                        System.out.println(" > > Partição: " + record.partition() 
+                            + ", Offset: " + record.offset() 
+                            + ", valor: " + record.value());
                     });
 
                 // #########
